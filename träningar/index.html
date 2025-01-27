@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="dice1.png" alt="" class="dice">
+    <img src="dice2.png" alt="" class="dice">
+    <img src="dice3.png" alt="" class="dice">
+    <br>
+    <button onclick="roll()">Klicka på mig</button>
+
+    <script>
+        function roll(){
+            let dices = document.getElementsByClassName("dice");
+
+            for(let i = 0; i < dices.length; i++){
+                let nr = Math.floor(Math.random()*3 + 1); // 1, 2 eller 3
+                dices[i].src = "dice" + nr + ".png";
+            }
+        }
+    </script>
+</body>
+</html>
